@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Product Details</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .container {
+            margin-top: 30px;
+        }
+        .product-details {
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f8f9fa;
+        }
+        .product-details h1 {
+            margin-bottom: 20px;
+        }
+        .product-details p {
+            font-size: 1.2em;
+        }
+        .product-details .back-link {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="product-details">
+        <h1>Product Details</h1>
+        <p><strong>Name:</strong> <span th:text="${product.name}"></span></p>
+        <p><strong>Price:</strong> $<span th:text="${product.price}"></span></p>
+        <p><strong>Description:</strong> <span th:text="${product.description}"></span></p>
+        <a class="btn btn-secondary back-link" th:href="@{/}">Back to Catalog</a>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
